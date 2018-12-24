@@ -2,6 +2,10 @@ Description
 -----------
 An Alternative launcher for the game Aion (EU/Gameforge) with a design inspired by the new NCLauncher2 from Korea.
 
+<p align="center">
+<img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_no_maintenance.png" width="600px">
+</p>
+
 Version supported:<br/>
   - Aion EU Gameforge; all languages; normal or steam installation
 
@@ -58,7 +62,10 @@ Using wireshark and node net.socket i was able to have the following working :
 Screenshot
 ----------
 
-*placeholder*
+<img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_preparing.png"/>
+<img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/settings.png"/>
+<img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_no_maintenance.png">
+
 
 Legal
 -----
