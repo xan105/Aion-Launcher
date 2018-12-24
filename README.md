@@ -51,13 +51,16 @@ Known Issues
 Aion NA support ?
 -----------------
 Not anytime soon.<br/>
-To emulate the 2FA authentification the launcher does we need to *"emulate"* their STS protocol.<br/>
+To emulate the 2FA authentification the launcher does; we need to *"emulate"* their STS protocol.<br/>
 Using wireshark and node net.socket i was able to have the following working :
  - `POST /Sts/Ping STS/1.0`
  - `POST /Sts/Connect STS/1.0`
+ - `POST /Auth/LoginStart STS/1.0`
  
- Reaching `POST /Auth/LoginStart STS/1.0` I got stuck on the key exchange. If you can help, please do so.<br/>
- But this wasn't for nothing: playing (first time) with wireshark and node net.socket for this allowed me to pull the game args from the Gameforge server later on.
+ Reaching `POST /Auth/KeyData STS/1.0` I got stuck on the key exchange. If you can help, please do so.<br/>
+ More information on the NCSoft STS Protocol [here](https://github.com/xan105/Aion-Launcher/wiki/%5BAion-NA%5D-STS-(Station-to-Station)-protocol)<br/>
+ 
+ But this wasn't for nothing: playing (first time) with wireshark and node net.socket for this allowed me to [pull the game args from the Gameforge server](https://github.com/xan105/Aion-Launcher/wiki/Gameforge-TCP-packet-(Launcher-to-Server)) later on.
    
 Screenshot
 ----------
