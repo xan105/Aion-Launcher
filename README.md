@@ -7,7 +7,7 @@ An alternative launcher for the game Aion with a design inspired by the new NCLa
 </p>
 
 Version supported:<br/>
-  - Aion EU Gameforge; all languages; normal or steam installation
+  - Aion EU Gameforge; all languages; normal or Steam installation
 
 Features
 --------
