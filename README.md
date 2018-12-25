@@ -1,6 +1,6 @@
 Description
 -----------
-An Alternative launcher for the game Aion (EU/Gameforge) with a design inspired by the new NCLauncher2 from Korea.
+An Alternative launcher for the game Aion with a design inspired by the new NCLauncher 2 from Korea.
 
 <p align="center">
 <img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_no_maintenance.png" width="600px">
@@ -21,8 +21,8 @@ Features
   - **Optional** direct login *2
   - Handle all the languages of the European version *3
   - UI is translated in English, French, and German. (Feel free to help me translate to the others languages)
-  - Pull game args from Gameforge server just like original launcher.
-  - Self update
+  - Pull current game args from Gameforge server just like original launcher.
+  - Self update _(start with -noselfupdate to skip this)_
 
 *1 Full install only, lite step installation (play as you download the rest of the game) is not implemented.<br/>
 *2 Equivalent of using command line parameter -user -password. Launcher will keep your credentials crypted *(aes-256-cbc)* on your computer but they will be passed clearly to *aion.bin* so use this at your own risk.<br/>
@@ -31,13 +31,13 @@ Features
 Caveats
 -------
 
-- Launcher doesn’t ask for admin rights like the original launcher does so you might have some problem if aion is installed in a admin restricted folder like `C:\Program Files`.
+- Launcher doesn’t ask for admin rights like the original launcher does. So you might have some problem if Aion is installed in an admin restricted folder like `C:\Program Files`.
   
 - To know when there is a new update this launcher scrap the gameforge http update server.<br/>
-Sometimes gameforge employee will push the update files there before increasing the number version reported to the official launcher.<br/>
+Sometimes Gameforge will push the update files there before increasing the number version reported to the official launcher.<br/>
 This can cause my launcher to update the game before the official launcher does.<br/>
 The official launcher appears to be checking if your local version number is equivalent to the remote last version instead of checking if it is equivalent or superior.<br/>
-So in this specific case after updating if you then launch the official launcher it will tell you that you need to update and if you do you will actually revert back to the previous version xD.
+So in this specific case after updating, if you then launch the official launcher, it will tell you that you need to update and if you do you will actually revert back to the previous version xD.
     
 - Because we are scrapping to find the last available version, it might take a while.
     
@@ -46,19 +46,19 @@ Known Issues
 
 - **Windows defender** on certain Windows installation kills *aion.bin* after being launched by this launcher.<br/>
    If after pressing the play button you see the splash screen and then nothing, this is most likely this problem.<br/>
-   Fix => Disable Windows defender or add aion.bin to the exception rules.
+   Fix => Disable Windows defender or add *aion.bin* to the exception rules.
    
 Aion NA support ?
 -----------------
 Not anytime soon.<br/>
 To emulate the 2FA authentification the launcher does; we need to *"emulate"* their STS protocol.<br/>
-Using wireshark and node net.socket i was able to have the following working :
+Using wireshark and node net.socket I was able to have the following working :
  - `POST /Sts/Ping STS/1.0`
  - `POST /Sts/Connect STS/1.0`
  - `POST /Auth/LoginStart STS/1.0`
  
  Reaching `POST /Auth/KeyData STS/1.0` I got stuck on the key exchange. If you can help, please do so.<br/>
- More information on the NCSoft STS Protocol [here](https://github.com/xan105/Aion-Launcher/wiki/%5BAion-NA%5D-STS-(Station-to-Station)-protocol)<br/>
+ More information on the Aion NA 2FA with STS Protocol [here](https://github.com/xan105/Aion-Launcher/wiki/%5BAion-NA%5D-STS-(Station-to-Station)-protocol)<br/>
  
  But this wasn't for nothing: playing (first time) with wireshark and node net.socket for this allowed me to [pull the game args from the Gameforge server](https://github.com/xan105/Aion-Launcher/wiki/Gameforge-TCP-packet-(Launcher-to-Server)) later on.
    
@@ -77,12 +77,14 @@ In no event or circumstances will the authors or company be held liable for any 
 And for anything that may occur as a result of your use, or inability to use the materials provided via this website.<br/> We accept no responsibilities in case your Aion provider decide to suspend temporarely or defenitely your Aion account.<br/>
 <br/>
 Unless otherwise specified you are free to:<br/>
-    Share — copy and redistribute the material in any medium or format<br/>
-    Adapt — remix, transform, and build upon the material<br/>
-<br/>
+
+- Share — copy and redistribute the material in any medium or format<br/>
+- Adapt — remix, transform, and build upon the material<br/>
+
 Under the following terms:<br/>
-    Attribution — You must give appropriate credit, provide a link, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.<br/>
-    NonCommercial — You may not use the material for commercial purposes.<br/>
+
+- Attribution — You must give appropriate credit, provide a link, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.<br/>
+- NonCommercial — You may not use the material for commercial purposes.<br/>
 
 © 2018 Anthony Beaumont. All rights reserved. <br/>
 Other trademarks, copyright are the property of their respective owners. No copyright or trademark infringement is intended by using third-party resources. Except where otherwise specified, the contents of this project is subject to copyright.<br/>
