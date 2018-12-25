@@ -1,6 +1,6 @@
 Description
 -----------
-An Alternative launcher for the game Aion with a design inspired by the new NCLauncher 2 from Korea.
+An alternative launcher for the game Aion with a design inspired by the new NCLauncher 2 from Korea.
 
 <p align="center">
 <img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_no_maintenance.png" width="600px">
