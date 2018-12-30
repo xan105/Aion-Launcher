@@ -21,7 +21,7 @@
 #define AppWorkingDir "{app}"
 #define AppIcon "{app}\package\resources\icon\icon.ico"
 
-#define OutputFileName "Aion-LIVE.Launcher.setup"
+#define OutputFileName "Aion-LIVE.Launcher.Setup"
 
 AppId={{20694538-E8BA-4435-8ABA-C47690993043}}
 AppName={#AppName}
