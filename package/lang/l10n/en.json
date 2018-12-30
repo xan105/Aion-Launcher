@@ -1,0 +1,127 @@
+{
+  "announce": "Announcement",
+  "button":{
+    "play": "Play",
+    "update": "Update",
+    "cancel" : "Cancel",
+    "save" : "Save",
+    "acknowledge" : "Got it !"
+  },
+  "menu" : {
+    "website": "Website",
+    "shop" : "Shop",
+    "forum": "Forum"
+  },
+  "stats": {
+    "steam": "Steam In-game",
+    "login": "Login Server",
+    "wait": "Pending ...",
+    "online": "Online",
+    "offline": "Offline",
+    "error": "Ping error !"
+  },
+  "status" : {
+    "checking" : "Checking for updates",
+    "tooLong" : "(this might take a while)"
+  },
+  "loadingBar" : {
+    "title" : {
+      "init" : "Preparing",
+      "dl" : "Download & Patch",
+      "patch" : "Download & Patch",
+      "end" : "Finishing"
+    },
+    "message" : {
+      "init" : "Compiling list of update files",
+      "dl" : "Downloading",
+      "patch" : "Patching",
+      "end" : "Cleaning up"    
+    }  
+   },
+  "login" : {
+    "title" : "Login",
+    "username" : "Username",
+    "password" : "Password",
+    "remember" : "Remember login",
+    "newUser": "New player ?",
+    "signup": "Sign Up"
+  },
+  "settings": {
+    "title": "Settings",
+    "lang" : {
+      "name": "Launcher language",
+      "en" : "English",
+      "fr" : "French",
+      "de" : "German"
+    },
+    "game_lang" : {
+      "name": "Game language",
+      "eng" : "English",
+      "fra" : "French",
+      "deu" : "German",
+      "esn" : "Spanish",
+      "ita" : "Italian",
+      "plk" : "Polish"
+    },
+    "voicePack" : {
+      "name" : "Audio Voice Pack",
+      "true" : "Japanese",
+      "false" : "None"
+    },
+    "run64" : {
+      "name" : "Run 64-bit client",
+      "true" : "If available",
+      "false" : "Never"
+    },
+    "fastStart": "Force game fast startup",
+    "igshop" : "In-game shop",
+    "igads" : "In-game Ads",
+    "tv" : "Aion TV",
+    "bonus" : {
+      "title" : "Bonus",
+      "critfont" : "Japanese Critical font"
+    },
+    "misc": {
+      "enabled" : {
+        "true" : "Enable",
+        "false" : "Disable"
+      },
+      "show" : {
+        "true" : "Show",
+        "false" : "Hide"
+      },
+      "installed" : {
+        "true" : "Install",
+        "false" : "Remove"
+      }
+    } 
+  },
+  "error" : {
+    "title": "Oh Nyerk !",
+    "0" : {
+      "ln1" : "Unexpected error !",
+      "ln2" : "Please try again.",
+      "ln3" : "If the problem continues, contact the author of this program."
+    },
+    "1" : {
+      "ln1" : "Your Aion installation is located in a restricted admin folder !",
+      "ln2" : "Therefore it will be impossible to update/modify anything.",
+      "ln3" : "Please run this launcher with admin rights."
+    },
+    "2" : {
+      "ln1" : "A network error has occurred !",
+      "ln2" : "Please check your network connection, then try again.",
+      "ln3" : "If the problem persists and your network connection is working, please try again later."
+    },
+    "3" : {
+      "ln1" : "Could not start the game !",
+      "ln2" : "Missing executable: aion.bin was not found.",
+      "ln3" : "Please use the wrench button to repair your game installation."
+    },
+    "4" : {
+      "ln1" : "Unexpected error on file operation !",
+      "ln2" : "Check for writing permission, read-only files and corrupted.",
+      "ln3" : "Please try again. If the problem continues, contact the author of this program."
+    }
+  }
+}

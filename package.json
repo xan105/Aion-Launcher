@@ -1,0 +1,45 @@
+{
+  "name": "AION-LIVE",
+  "description": "Alternative Launcher for the game Aion",
+  "version": "1.0.0",
+  "main": "package/init.js",
+  "view" : {
+    "app" : "package/view/app.html",
+    "updater" : "package/view/updater.html"
+   },  
+  "window": {
+    "title": "AION-LIVE - Launcher",
+    "icon": "package/resources/icon/icon.png",
+    "frame": false,
+    "width": 1200,
+    "height": 750,
+    "position": "center",
+    "transparent": true,
+    "resizable": false,
+    "fullscreen": false,
+    "show": false,
+    "always_on_top": false
+  },
+  "splash" : {
+    "width": 305,
+    "height": 275,
+    "show": true,
+    "focus" : true,
+    "frame": false,
+    "position": "center",
+    "transparent": true,
+    "resizable": false,
+    "fullscreen": false,
+    "always_on_top": false
+  },
+  "selfUpdate": {
+    "enable": true,
+    "github": "https://api.github.com/repos/xan105/Aion-Launcher/releases/latest",
+    "name" : "Aion-LIVE.Launcher.Setup.exe"
+  }, 
+  "webkit": {
+    "plugin": false
+  },
+  "user-agent" : "Chrome/",
+  "chromium-args": "--disable-gpu"
+}

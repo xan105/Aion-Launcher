@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" class="noselect">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Beaumont Anthony">  
+  <link rel="stylesheet" href="../resources/css/normalize.css" type="text/css"/>
+  <link rel="stylesheet" href="../resources/css/app.css" type="text/css"/>
+</head>
+<body>
+  <audio id="bgm" autoplay="autoplay" loop="loop">  
+    <source src="../resources/sound/bgm.ogg" type="audio/ogg">
+  </audio>
+
+  <header>
+    <div class="title"></div>
+    <ul id="window-controls" class="button hover">
+      <li id="win-close"></li>
+      <li id="win-minimize"></li>
+      <li id="win-settings"></li>
+      <li id="win-sound" data-state="on"></li>
+    </ul>
+
+  </header>
+  
+  <main data-view="main">
+  
+  <div id="menu">
+  
+    <div id="logo"></div>
+    
+    <ul>
+      <li><a href="https://en.aion.gameforge.com/website/" target="_blank"></a></li>
+      <li><a href="https://en.aion.gameforge.com/shop/" target="_blank"></a></li>
+      <li><a href="https://board.en.aion.gameforge.com/" target="_blank"></a></li>
+    </ul>
+    
+    <ul class="social">
+      <li><a href="https://www.facebook.com/aion.uk/?brand_redir=163944090378493" target="_blank" class="brand-facebook"></a></li>
+      <li><a href="https://twitter.com/Aion_FreeToPlay" target="_blank" class="brand-twitter"></a></li>
+      <li><a href="https://www.youtube.com/user/AionEurope" target="_blank" class="brand-youtube"></a></li>
+    </ul>
+  
+  </div>
+  
+  
+    <section id="home">
+    
+    <div class="upper">
+      <div class="shugo"></div>
+      <div class="stats">
+        <span class="steam"><span></span> : <span class="playerInGame"></span></span>
+        <span class="server"><span></span> : <span class="status" data-status="wait">
+        
+          <span class="wait"></span>
+          <span class="online"></span>
+          <span class="offline"></span>
+          <span class="error"></span>
+        
+        </span></span>
+      </div>
+    </div>
+    
+    <div class="middle">
+    
+      <div class="box announce">
+        <span class="title"></span>
+        <span class="content"></span>
+        <div class="shugo"></div>
+      </div>
+      
+      <div class="frame">
+        <iframe id="gameforge-news" src="" seamless></iframe>
+        <div id="frame-reload"></div>
+        
+       <div class="bottom">
+        <div class="status">
+          <span class="loading">
+            <span class="spinner"></span> 
+            <span class="message"></span>
+            <span class="takingTooLong"></span>
+           </span>
+        </div>
+      
+        <div class="loadingBar" data-step="0" data-percent="0" data-speed="null">
+          <span class="meter blue"></span>
+          <span class="title">
+            <span class="action">
+              <span class="init"></span>
+              <span class="dl"></span>
+              <span class="patch"></span>
+              <span class="end"></span>
+            </span> 
+          </span>
+          <span class="message">
+           <span class="action">
+              <span class="init"></span>
+              <span class="dl"><span></span> <span class="totalSize"></span></span>
+              <span class="patch"></span>
+              <span class="end"></span>
+           </span>
+           <span class="inprogress">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </span>
+          </span>
+        </div>
+       </div>  
+        
+        
+      </div>
+      
+      <div class="box login">
+        <h1></h1>
+        <form>
+          <input type="text" placeholder="Username" value="" autocomplete="off">      
+          <input type="password" placeholder="Password" value="" autocomplete="off">
+          <div class="option">
+            <input type="checkbox" id="rememberMe" value="rememberMe" autocomplete="off">
+            <label for="rememberMe"></label>
+          </div>
+        </form>
+        <p><span></span>
+        <a href="https://en.aion.gameforge.com/website/register/" target="_blank"></a>
+        </p>
+        
+        
+        <div class="bottom">
+          <div id="btns">
+            <div id="btn-launch" class="btn blue">
+              <span class="play"></span>
+              <span class="update"></span>
+            </div>
+            <div id="btn-repair" class="btn blue"><span class="icon"></span></div>
+          </div>
+        </div>
+        
+      </div>
+      
+      </div>
+    
+    </section>
+    
+    <section id="settings">
+    
+    <div class="wrapper">
+      <ul class="option">
+      
+        <li></li>
+        
+        <li>
+          <div class="left"></div>
+          <div class="right">
+           <div class="previous"><span class="arrow"></span></div>
+            <select autocomplete="off" class="dropdown">
+            </select>
+           <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="dropdown aion" id="option_language">
+                <option value="eng" selected></option>
+                <option value="fra"></option>
+                <option value="deu"></option>
+                <option value="esn"></option>
+                <option value="ita"></option>
+                <option value="plk"></option>
+              </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+        
+       <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="aion" id="option_voicepack">
+                <option value="false" selected></option>
+                <option value="true"></option>
+              </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="aion" id="option_run64">
+                <option value="true" selected></option>
+                <option value="false"></option>
+            </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+
+        <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="aion" id="option_fastStartUp">
+                <option value="true" selected></option>
+                <option value="false"></option>
+              </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="aion" id="option_ingame_shop">
+                <option value="true" selected></option>
+                <option value="false"></option>
+              </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="aion" id="option_ads">
+                <option value="true"></option>
+                <option value="false" selected></option>
+              </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+        
+        <li>
+          <div class="left"></div>
+          <div class="right">
+            <div class="previous"><span class="arrow"></span></div>
+              <select autocomplete="off" class="aion" id="option_tv">
+                <option value="true"></option>
+                <option value="false" selected></option>
+              </select>
+            <div class="next"><span class="arrow"></span></div>
+          </div>
+        </li>
+
+      </ul>
+      
+      <div class="buttons">
+        <div class="btn red" id="btn-settings-cancel"></div>
+        <div class="btn blue" id="btn-settings-save"></div>
+      </div>
+      
+      <ul class="bonus">
+        <li></li>
+        <li><div class="left"></div><div class="right"><div class="btn small blue" id="btn-criticalFont">
+          <span class="install"></span>
+          <span class="remove"></span>
+          <span class="inprogress">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+          </span>
+        </div></div></li>
+      </ul>
+    </div>
+    
+    </section>
+  
+  
+  </main>
+
+  <footer></footer>
+  
+  <dialog id="modal" data-error="0" data-alert="false"> 
+    <div class="header"><span></span></div>
+    <div class="content">
+    
+         <div class="error0">
+          <p><span class="ln"></span><br>
+          <span class="ln"></span></p>
+          
+          <p><span class="ln"></span></p>
+        </div>
+    
+        <div class="error1">
+          <p><span class="ln"></span><br />
+             <span class="ln"></span></p>
+          
+          <p><span class="ln"></span></p>
+        </div>
+        
+        <div class="error2">
+          <p><span class="ln"></span><br />
+             <span class="ln"></span></p>
+          
+          <p><span class="ln"></span></p>
+        </div>
+        
+        <div class="error3">
+          <p><span class="ln"></span><br />
+          <span class="ln"></span></p>
+          
+          <p><span class="ln"></span></p>
+        </div>
+        
+        <div class="error4">
+          <p><span class="ln"></span><br />
+          <span class="ln"></span></p>
+          
+          <p><span class="ln"></span></p>
+        </div>
+    
+    </div>
+    <div class="footer">
+      <div id="error-dialog-exit" class="btn red"></div>
+    </div>
+  </dialog>
+
+<script src="../ui/lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="../ui/lib/alterClass.js" type="text/javascript"></script>
+<script src="../ui/window.js" type="text/javascript"></script>
+<script src="../ui/audio.js" type="text/javascript"></script>
+<script src="../ui/credentials.js" type="text/javascript"></script>
+<script src="../lang/loader.js" type="text/javascript"></script>
+<script src="../app.js" type="text/javascript"></script>
+
+</body>
+</html>

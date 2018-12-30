@@ -1,0 +1,23 @@
+/* build tool */
+python 2.7
+Visual C++ Build Tools 
+
+/* ffi */
+npm install get-uv-event-loop-napi-h
+copy "node_modules\get-uv-event-loop-napi-h\include\get-uv-event-loop-napi.h" => %UserProfile%\.node-gyp\[version]\include\node
+npm install --msvs_version=2017 ffi-napi
+
+/* recompile */
+
+set PYTHON=C:\Python27\python.exe
+set npm_config_target=0.34.2
+set npm_config_arch=ia32
+set npm_config_runtime=node-webkit
+set npm_config_build_from_source=true
+set npm_config_node_gyp=%UserProfile%\AppData\Roaming\npm\node_modules\nw-gyp\bin\nw-gyp.js
+cd node_modules\ref
+nw-gyp rebuild --target=0.34.2 --arch=ia32
+cd ..\ref-napi
+nw-gyp rebuild --target=0.34.2 --arch=ia32
+cd ..\ffi-napi
+nw-gyp rebuild --target=0.34.2 --arch=ia32

@@ -1,0 +1,127 @@
+{
+  "announce": "Annonces",
+  "button":{
+    "play": "Jouer",
+    "update": "Mise à jour",
+    "cancel" : "Annuler",
+    "save" : "Confirmer",
+    "acknowledge" : "Compris !"
+  },
+  "menu" : {
+    "website": "Site Web",
+    "shop" : "Boutique",
+    "forum": "Forum"
+  },
+  "stats": {
+    "steam": "Joue sur Steam",
+    "login": "Serveur de connexion",
+    "wait": "En cours ...",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "error": "Erreur !"
+  },
+  "status" : {
+    "checking" : "Vérification des mises à jour",
+    "tooLong" : "(cela peut prendre un peu de temps)"
+  },
+  "loadingBar" : {
+    "title" : {
+      "init" : "Préparation",
+      "dl" : "Télécharger",
+      "patch" : "Appliquer",
+      "end" : "Finition"
+    },
+    "message" : {
+      "init" : "Création de la liste des fichiers",
+      "dl" : "Téléchargement",
+      "patch" : "Application de la mise à jour",
+      "end" : "Nettoyage"    
+    }  
+   },
+  "login" : {
+    "title" : "Connexion",
+    "username" : "Nom d'utilisateur",
+    "password" : "Mot de passe",
+    "remember" : "S'en rappeler",
+    "newUser": "Nouveau joueur ?",
+    "signup": "S'inscrire"
+  },
+  "settings": {
+    "title": "Options",
+    "lang" : {
+      "name": "Langue de l'interface",
+      "en" : "Anglais",
+      "fr" : "Français",
+      "de" : "Allemand"
+    },
+    "game_lang" : {
+      "name": "Langue du jeu",
+      "eng" : "Anglais",
+      "fra" : "Français",
+      "deu" : "Allemand",
+      "esn" : "Espagnol",
+      "ita" : "Italien",
+      "plk" : "Polonais"
+    },
+    "voicePack" : {
+      "name" : "Pack de voix audio",
+      "true" : "Japonais",
+      "false" : "Aucun"
+    },
+    "run64" : {
+      "name" : "Exécuter en 64 bits",
+      "true" : "Si disponible",
+      "false" : "Jamais"
+    },
+    "fastStart": "Forcer le démarrage rapide du jeu",
+    "igshop" : "Boutique en jeu",
+    "igads" : "Publicités en jeu",
+    "tv" : "Aion TV",
+    "bonus" : {
+      "title" : "Bonus",
+      "critfont" : "Police japonaise pour les coups critiques"
+    },
+    "misc": {
+      "enabled" : {
+        "true" : "Activer",
+        "false" : "Désactiver"
+      },
+      "show" : {
+        "true" : "Montrer",
+        "false" : "Cacher"
+      },
+      "installed" : {
+        "true" : "Installer",
+        "false" : "Retirer"
+      }
+    } 
+  },
+  "error" : {
+    "title": "Oh Nyark !",
+    "0" : {
+      "ln1" : "Erreur inattendue !",
+      "ln2" : "Veuillez réessayer.",
+      "ln3" : "Si le problème persiste, contactez l'auteur de ce programme."
+    },
+    "1" : {
+      "ln1" : "Aion se trouve dans un dossier d’administrateur restreint !",
+      "ln2" : "Par conséquent, il sera impossible de mettre à jour / modifier quoi que ce soit.",
+      "ln3" : "Veuillez utiliser ce programme avec les droits d'administrateur."
+    },
+    "2" : {
+      "ln1" : "Une erreur réseau est survenue!",
+      "ln2" : "Veuillez vérifier votre connexion réseau, puis réessayez.",
+      "ln3" : "Si le problème persiste et que votre connexion réseau fonctionne, veuillez réessayer ultérieurement."
+    },
+    "3" : {
+      "ln1" : "Impossible de démarrer le jeu !",
+      "ln2" : "Exécutable manquant: aion.bin n'a pas été trouvé.",
+      "ln3" : "Veuillez utiliser le bouton clé à molette pour réparer l’installation de votre jeu."
+    },
+    "4" : {
+      "ln1" : "Erreur inattendue sur l'opération de fichier !",
+      "ln2" : "Vérifiez les droits d’écriture, les fichiers en lecture seule et corrompus.",
+      "ln3" : "Veuillez réessayer. Si le problème persiste, contactez l'auteur de ce programme."
+    }
+  }
+}

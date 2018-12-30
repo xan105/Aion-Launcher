@@ -1,0 +1,127 @@
+{
+  "announce": "Ankündigung",
+  "button":{
+    "play": "Spielen",
+    "update": "Aktualisieren",
+    "cancel" : "Abbrechen",
+    "save" : "Bestätigen",
+    "acknowledge" : "Verstanden !"
+  },
+  "menu" : {
+    "website": "Webseite",
+    "shop" : "Shop",
+    "forum": "Forum"
+  },
+  "stats": {
+    "steam": "Steam Im Spiel",
+    "login": "Anmeldeserver",
+    "wait": "Warten ...",
+    "online": "Online",
+    "offline": "Offline",
+    "error": "Ping-Fehler !"
+  },
+  "status" : {
+    "checking" : "Nach Updates suchen",
+    "tooLong" : "(dies kann eine Weile dauern)"
+  },
+  "loadingBar" : {
+    "title" : {
+      "init" : "Vorbereiten",
+      "dl" : "Herunterladen",
+      "patch" : "Update anwenden",
+      "end" : "Fertigstellung"
+    },
+    "message" : {
+      "init" : "Liste der Update-Dateien erstellen",
+      "dl" : "Herunterladen",
+      "patch" : "Anwenden",
+      "end" : "Aufräumen"    
+    }  
+   },
+  "login" : {
+    "title" : "Einloggen",
+    "username" : "Nutzername",
+    "password" : "Passwort",
+    "remember" : "Speichern",
+    "newUser": "Neuer Spieler ?",
+    "signup": "Anmelden"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "lang" : {
+      "name": "Sprache des Launchers wählen",
+      "en" : "Englisch",
+      "fr" : "Französisch",
+      "de" : "Deutsche"
+    },
+    "game_lang" : {
+      "name": "Sprache des Spiels wählen",
+      "eng" : "Englisch",
+      "fra" : "Französisch",
+      "deu" : "Deutsche",
+      "esn" : "Spanisch",
+      "ita" : "Italienisch",
+      "plk" : "Polnische"
+    },
+    "voicePack" : {
+      "name" : "Audio-Sprachpaket",
+      "true" : "Japanisch",
+      "false" : "Keine"
+    },
+    "run64" : {
+      "name" : "64-Bit-Client",
+      "true" : "Aktivieren",
+      "false" : "Deaktivieren"
+    },
+    "fastStart": "Erzwinge den Spielstart schnell",
+    "igshop" : "Shop im Spiel",
+    "igads" : "Anzeigen im Spiel",
+    "tv" : "Aion TV",
+    "bonus" : {
+      "title" : "Bonus",
+      "critfont" : "Japanische kritische Schrift"
+    },
+    "misc": {
+      "enabled" : {
+        "true" : "Aktivieren",
+        "false" : "Deaktivieren"
+      },
+      "show" : {
+        "true" : "Aktivieren",
+        "false" : "Deaktivieren"
+      },
+      "installed" : {
+        "true" : "Installieren",
+        "false" : "Löschen"
+      }
+    } 
+  },
+  "error" : {
+    "title": "Oh Jang !",
+    "0" : {
+      "ln1" : "Unerwarteter Fehler !",
+      "ln2" : "Bitte versuche es erneut.",
+      "ln3" : "Wenn das Problem weiterhin besteht, wenden Sie sich an den Autor dieses Programms."
+    },
+    "1" : {
+      "ln1" : "Aion befindet sich in einem eingeschränkten Admin-Ordner!",
+      "ln2" : "Daher ist es unmöglich, irgendetwas zu aktualisieren oder zu ändern.",
+      "ln3" : "Bitte verwenden Sie diese mit Administratorrechten."
+    },
+    "2" : {
+      "ln1" : "Ein Netzwerkfehler ist aufgetreten!",
+      "ln2" : "Bitte überprüfen Sie Ihre Netzwerkverbindung und versuchen Sie es erneut.",
+      "ln3" : "Wenn das Problem weiterhin besteht und Ihre Netzwerkverbindung funktioniert, versuchen Sie es später erneut."
+    },
+    "3" : {
+      "ln1" : "Das Spiel konnte nicht gestartet werden!",
+      "ln2" : "Fehlende ausführbare Datei: aion.bin wurde nicht gefunden.",
+      "ln3" : "Bitte benutze den Schraubenschlüssel, um deine Spielinstallation zu reparieren."
+    },
+    "4" : {
+      "ln1" : "Unerwarteter Fehler beim Dateibetrieb!",
+      "ln2" : "Überprüfen Sie die Schreibberechtigung, schreibgeschützte und beschädigte Dateien.",
+      "ln3" : "Bitte versuche es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an den Autor dieses Programms."
+    }
+  }
+}

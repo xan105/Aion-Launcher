@@ -1,0 +1,8 @@
+{
+  "version": "0.34.2",
+  "arch" : "x86",
+  "url" : {
+    "sdk": "https://dl.nwjs.io/v0.34.2/nwjs-sdk-v0.34.2-win-ia32.zip",
+    "prod": "https://dl.nwjs.io/v0.34.2/nwjs-v0.34.2-win-ia32.zip"
+  }
+}

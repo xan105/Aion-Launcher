@@ -1,0 +1,198 @@
+html, body {
+  padding : 0;
+  margin : 0;
+}
+
+body {
+  padding: 20px;
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+main {
+    width: 100%; 
+    height: 100%; 
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgb(19, 26, 55) 0%, rgb(41, 52, 101) 100%);
+    padding: 10px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#logo {
+    background: url(../img/weda_chibi.png) no-repeat;
+    width: 95px;
+    height: 113px;
+    background-size: contain;
+    filter: drop-shadow(5px 5px 5px #101010);
+    margin: 0 auto 15px 86px;
+}
+
+#version {
+    text-align: center;
+    color: #d2d2d2;
+    font-family: arial;
+    font-weight: bold;
+    margin: 5px 0;
+    min-height: 18px;
+}
+
+#status {
+    height: 64px;
+    width: 100%;
+    display: flex;
+}
+
+.lds-roller {
+    width: 64px;
+    position: relative;
+    transform: scale(-0.8);
+    margin: 0 auto;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4d799f; /*change color here*/
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingBar {
+    display: none;
+    height: 8px;
+    position: relative;
+    background: #353e79;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    width: 180px;
+    margin: 14px auto 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loadingBar > .meter {
+    width: 0%;
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s all linear;
+}
+
+.loadingBar:before {
+    content: attr(data-percent) "%";
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    display: table;
+    color: #dedede;
+    z-index: 1;
+    text-shadow: rgba(0, 0, 0, .5) 3px 3px 3px;
+}
+
+.loadingBar:after {
+    content: "(" attr(data-speed) ")";
+    font-size: 13px;
+    position: absolute;
+    top: 23px;
+    right: 0;
+    padding-right: 3px;
+    display: table;
+    color: #dedede;
+}
+
+.loadingBar[data-percent="100"] > .meter {
+      border-top-right-radius:20px;
+      border-bottom-right-radius:20px;
+}
+
+.loadingBar[data-speed="null"]:after { display: none; }
+
+.loadingBar > .meter.blue {
+    background-color: #4969af;
+    background-image: linear-gradient(to bottom, #4969af, #375db3);
+}
