@@ -3,7 +3,7 @@
 locales/
 pnacl/
 swiftshader/
-setup/[app]/
+setup/app/
 setup/output/
 
 #files

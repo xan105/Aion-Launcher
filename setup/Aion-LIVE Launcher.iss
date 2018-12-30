@@ -83,8 +83,8 @@ Source: "resources\avatar.bmp"; DestDir: "{tmp}" ;Flags: dontcopy;
 Source: "resources\warning.bmp"; DestDir: "{tmp}" ;Flags: dontcopy;
 Source: "resources\curl.exe"; DestDir: "{tmp}" ; Flags: dontcopy;
 ;App files
-Source: "[app]\*"; Excludes: "\package.json"; DestDir: "{app}"; Flags: ignoreversion overwritereadonly recursesubdirs createallsubdirs;
-Source: "[app]\package.json"; DestDir: "{app}"; Flags: ignoreversion overwritereadonly; Attribs: readonly;
+Source: "app\*"; Excludes: "\package.json"; DestDir: "{app}"; Flags: ignoreversion overwritereadonly recursesubdirs createallsubdirs;
+Source: "app\package.json"; DestDir: "{app}"; Flags: ignoreversion overwritereadonly; Attribs: readonly;
                 
 [Icons]
 Name: "{commondesktop}\{#AppName}"; Filename: "{#AppMain}"; WorkingDir: "{#AppWorkingDir}"; IconFilename: "{#AppIcon}"; Check: GetOption('CreateDesktopIcon');
