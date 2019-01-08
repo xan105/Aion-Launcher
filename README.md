@@ -44,9 +44,9 @@ So in this specific case after updating, if you then launch the official launche
 Known Issues
 ------------
 
-- **Windows defender** on certain Windows installation kills *aion.bin* after being launched by this launcher.<br/>
-   If after pressing the play button you see the splash screen and then nothing, this is most likely this problem.<br/>
-   Fix => Disable Windows defender or add *aion.bin* to the exception rules.
+-  **Windows 10 and Aion 64bits** *(NB: This bug also happened with Gameforge's launcher)* <br/>
+   If after pressing the play button you see the splash screen and then nothing.<br/>
+   Use Windows 7 compatibility mode to fix it.<br/>
    
 Aion NA support ?
 -----------------
