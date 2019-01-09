@@ -75,8 +75,8 @@
     },
     "fastStart": "Forcer le démarrage rapide du jeu",
     "igshop" : "Boutique en jeu",
-    "igads" : "Publicités en jeu",
-    "tv" : "Aion TV",
+    "igads" : "Publicités en jeu & Aion TV",
+    "forcewin7" : "Aion en mode de compatibilité pour Windows 7",
     "bonus" : {
       "title" : "Bonus",
       "critfont" : "Police japonaise pour les coups critiques"

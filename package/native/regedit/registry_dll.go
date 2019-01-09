@@ -28,7 +28,7 @@ func GetHKEY(root string) registry.Key {
 }
 
 //export RegKeyExists
-func RegKeyExists(root *C.char, key *C.char, name *C.char) *C.char {
+func RegKeyExists(root *C.char, key *C.char) *C.char {
 
 	var result string
 	HKEY := GetHKEY(C.GoString(root))
@@ -40,7 +40,7 @@ func RegKeyExists(root *C.char, key *C.char, name *C.char) *C.char {
   } else {
     result = "true"
   }
-  
+
   defer k.Close()
 		 
   return C.CString(result)

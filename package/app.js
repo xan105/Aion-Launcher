@@ -11,9 +11,12 @@ var app = {
   onStart : function(){
   
             isElevated().then((elevated)=>{
+            
                 if (!elevated && aion.aionDir.includes("C:\\Program Files")) {
                   this.error(1);
                 }
+                
+                if (elevated) { $("#dir_select_game ~label span.uac").hide(); }
              })
              .catch(()=>{})
              
@@ -42,6 +45,13 @@ var app = {
             $("#menu ul:not(.social) li:nth-child(1) a").attr("href",`https://${locale}.aion.gamege.com/website/`);
             $("#menu ul:not(.social) li:nth-child(2) a").attr("href",`https://${locale}.aion.gameforge.com/shop/`);
             $("#menu ul:not(.social) li:nth-child(3) a").attr("href",`https://board.${locale}.aion.gameforge.com/`);
+            
+            $("#dir_select_game").attr("nwworkingdir",aion.aionDir);
+            try {
+              $("#dir_select_dl").attr("nwworkingdir",aion.options.path.download);
+            }catch(e){
+              $("#dir_select_dl").attr("nwworkingdir","");
+            }
 
             $("#gameforge-news").attr("src",`https:\/\/${locale}.aion.gameforge.com/website/game/slider`);
             
@@ -263,8 +273,41 @@ var app = {
                    if (i <= 0) { i = sel.options.length }
                    sel.options[--i%sel.options.length].selected = true;
               });  
-        
-       
+    
+              $("#dir_select_game").change(function() {
+              
+                  if ($(this).find("~label span:first-child").hasClass("uac")) { return self.error(5,true);  }
+              
+                  if ($(this).val() && $(this).val() !== '') {
+                    aion.changeAionDir($(this).val()); 
+                    $(this).attr("nwworkingdir",$(this).val());
+                    $(this).val('');
+                    chrome.runtime.reload();
+                  }
+              });
+
+              $("#dir_select_dl").change(async function() {
+                  if ($(this).val() && $(this).val() !== '') {
+                    
+                    aion.options.path = {download : $(this).val()}; 
+                    $(this).attr("nwworkingdir",$(this).val());
+                    $(this).val('');
+                    
+                    try {
+                      await aion.writeOptionsToFile();
+                    }
+                    catch(err) {
+                      return self.error(4);
+                    }
+                    
+                    chrome.runtime.reload();
+                  }
+              });
+              
+              
+              
+              
+              
   
   },
   progress : {

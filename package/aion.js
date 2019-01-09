@@ -122,9 +122,15 @@ function aion(optionFile = path.join(folder.defaultDir,"options.ini")) {
       this.options.Aion.ads = false;
     }
     
-    if (typeof this.options.Aion.tv !== "boolean"){
-      this.options.Aion.tv = false;
-    }  
+    if (typeof this.options.Aion.forcewin7 !== "boolean"){
+      this.options.Aion.forcewin7 = true;
+    } 
+    
+    if (this.options.path) {
+      if (this.options.path.download) {
+        folder.download = this.options.path.download; 
+      }
+    }
 
   }catch(e) {
     debug.log("No options file using default values");
@@ -136,7 +142,7 @@ function aion(optionFile = path.join(folder.defaultDir,"options.ini")) {
         fastStartUp: true,
         ingame_shop: true,
         ads: false,
-        tv: false
+        forcewin7: true
       }
     };
   }
@@ -210,7 +216,7 @@ function getAionDirSync() {
      else {
        try {
          ffs.sync.mkdir(dir);
-         regedit.RegWriteStringValue("HKLM","Software\\Gameforge\\AION-LIVE","BaseDir",dir);
+         this.changeAionDir(dir);//untested
          return dir
        }catch(e){
          debug.log(e);
@@ -219,6 +225,17 @@ function getAionDirSync() {
   }
 }
 
+aion.prototype.changeAionDir = function(dir) {
+
+  try {
+    regedit.RegWriteStringValue("HKLM","Software\\Gameforge\\AION-LIVE","BaseDir",dir);
+    regedit.RegDeleteKeyValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,"bin32/aion.bin"));
+    regedit.RegDeleteKeyValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,"bin64/aion.bin"));
+  }catch(e) {
+    debug.log(e);
+  }
+
+}
 
 function GetLocalVersionSync(file) {
 
@@ -492,13 +509,10 @@ aion.prototype.run = async function(credentials = {user: null, password: null}) 
   }
   
   if (this.options.Aion.ads) { 
-    args.push(`-n20`); 
+    args.push(`-n20`);
+    args.push(`-aiontv`); 
   } else { 
     args.push(`-hidepromo`); 
-  }
-  
-  if (this.options.Aion.tv) { 
-    args.push(`-aiontv`); 
   }
   
   if (credentials.user && credentials.password) {
@@ -507,6 +521,14 @@ aion.prototype.run = async function(credentials = {user: null, password: null}) 
   }
 
   debug.log(args);
+  
+  if (this.options.Aion.forcewin7) {
+    regedit.RegWriteStringValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,bin.x64),"~ WIN7RTM");
+    regedit.RegWriteStringValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,bin.x86),"~ WIN7RTM");
+  } else {
+    regedit.RegDeleteKeyValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,bin.x64));
+    regedit.RegDeleteKeyValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,bin.x86));
+  }
 
   if (this.options.Aion.fastStartUp) {
     await forcefaststart.call(this);

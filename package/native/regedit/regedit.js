@@ -2,7 +2,7 @@ const path = require('path');
 const ffi = require(path.resolve(__dirname, "../node_modules/ffi-napi"));
 
 module.exports = ffi.Library(path.resolve(__dirname, "regedit.dll"), {
-   'RegKeyExists': ["string", ["string", "string", "string"]],
+   'RegKeyExists': ["string", ["string", "string"]],
    'RegQueryStringValue': ["string", ["string", "string", "string"]],
    'RegQueryStringValueAndExpand': ["string", ["string", "string", "string"]],
    'RegQueryBinaryValue': ["string", ["string", "string", "string"]],

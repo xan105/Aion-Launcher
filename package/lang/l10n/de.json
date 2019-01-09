@@ -75,8 +75,8 @@
     },
     "fastStart": "Erzwinge den Spielstart schnell",
     "igshop" : "Shop im Spiel",
-    "igads" : "Anzeigen im Spiel",
-    "tv" : "Aion TV",
+    "igads" : "Anzeigen im Spiel & Aion TV",
+    "forcewin7" : "Aion im Windows 7-Kompatibilitätsmodus aus",
     "bonus" : {
       "title" : "Bonus",
       "critfont" : "Japanische kritische Schrift"

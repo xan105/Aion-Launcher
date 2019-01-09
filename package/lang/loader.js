@@ -128,9 +128,9 @@ var l10n = {
             selector.find("li:nth-child(8) .left").text(self.clean(template.settings.igads));
             selector.find("li:nth-child(8) .right select option[value='true']").text(self.clean(template.settings.misc.show["true"]));
             selector.find("li:nth-child(8) .right select option[value='false']").text(self.clean(template.settings.misc.show["false"]));          
-            selector.find("li:nth-child(9) .left").text(self.clean(template.settings.tv));
-            selector.find("li:nth-child(9) .right select option[value='true']").text(self.clean(template.settings.misc.show["true"]));
-            selector.find("li:nth-child(9) .right select option[value='false']").text(self.clean(template.settings.misc.show["false"]));
+            selector.find("li:nth-child(9) .left").text(self.clean(template.settings.forcewin7));
+            selector.find("li:nth-child(9) .right select option[value='true']").text(self.clean(template.settings.misc.enabled["true"]));
+            selector.find("li:nth-child(9) .right select option[value='false']").text(self.clean(template.settings.misc.enabled["false"]));
             $("#btn-settings-cancel").text(self.clean(template.button.cancel));
             $("#btn-settings-save").text(self.clean(template.button.save));         
             $("#settings .bonus li:first-child").text(self.clean(template.settings.bonus.title));

@@ -40,13 +40,6 @@ The official launcher appears to be checking if your local version number is equ
 So in this specific case after updating, if you then launch the official launcher, it will tell you that you need to update and if you do you will actually revert back to the previous version xD.
     
 - Because we are scrapping to find the last available version, it might take a while.
-    
-Known Issues
-------------
-
-- **Windows defender** on certain Windows installation kills *aion.bin* after being launched by this launcher.<br/>
-   If after pressing the play button you see the splash screen and then nothing, this is most likely this problem.<br/>
-   Fix => Disable Windows defender or add *aion.bin* to the exception rules.
    
 Aion NA support ?
 -----------------

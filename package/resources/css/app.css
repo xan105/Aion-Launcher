@@ -384,6 +384,7 @@ iframe[seamless], webview[seamless]{
 
 .box.announce > .content > b font[color="#b11a1a"] {
     color: #ff3838 !important;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -734,6 +735,25 @@ iframe[seamless], webview[seamless]{
   /*display: flex;*/
   display: none;
   transition: all .1s ease-out;
+  overflow-y: scroll
+}
+#settings::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+#settings::-webkit-scrollbar-track {
+  background: #355896;
+}
+
+/* Handle */
+#settings::-webkit-scrollbar-thumb {
+  background: #0080b9;
+}
+
+/* Handle on hover */
+#settings::-webkit-scrollbar-thumb:hover {
+  background: #0096d6;
 }
 
 #settings .wrapper {
@@ -743,6 +763,38 @@ iframe[seamless], webview[seamless]{
 
 #settings ul {
   padding-top: 10px;
+}
+
+#settings ul.advance {
+  margin-top: 35px;
+  position: relative;
+}
+
+#settings ul.advance input[type=file] { display: none; }
+
+#settings ul.advance span.uac {
+
+    background: url(../img/uac.svg) no-repeat;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: text-top;
+    margin-right: 3px;
+
+}
+
+#settings ul.advance:before {
+    content: '';
+    background: url(../img/lab.png) no-repeat;
+    width: 140px;
+    height: 112px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 5px #101010);
+    z-index: 1;
+    transform: translateX(-100%);
+    top: 6px;
+    left: -10px;
 }
 
 #settings li:first-child {
