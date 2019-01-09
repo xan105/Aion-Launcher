@@ -40,6 +40,13 @@ The official launcher appears to be checking if your local version number is equ
 So in this specific case after updating, if you then launch the official launcher, it will tell you that you need to update and if you do you will actually revert back to the previous version xD.
     
 - Because we are scrapping to find the last available version, it might take a while.
+    
+Known Issues
+------------
+
+-  **Windows 10 and Aion 64bits** *(NB: This bug also happened with Gameforge's launcher)* <br/>
+   If after pressing the play button you see the splash screen and then nothing.<br/>
+   Use Windows 7 compatibility mode to fix it.<br/>
    
 Aion NA support ?
 -----------------
