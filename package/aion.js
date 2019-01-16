@@ -21,6 +21,7 @@ const parseTorrent = require(path.resolve("./package/node_modules/parse-torrent"
 const regedit = require(path.resolve("./package/native/regedit/regedit.js"));
 const pak2zip = require(path.resolve("./package/native/pak2zip/pak2zip.js"));
 const zip = require(path.resolve("./package/node_modules/adm-zip"));
+const systemCFG = require(path.resolve("./package/systemCFG.js"));
 
 const folder = {
     download: path.join(win32.path.localappdata,"AION-LIVE/download"),
@@ -1162,4 +1163,33 @@ async function voicepackCreatePatch(source, destination) {
     debug.log(e);
   }
 
+}
+
+aion.prototype.hasSystemCFG = async function() {
+
+  let file = path.join(this.aionDir,"\system.cfg");
+  
+  return await ffs.promises.exists(file);
+  
+}
+
+aion.prototype.readSystemCFG = function() {
+
+  let file = path.join(this.aionDir,"\system.cfg");
+  
+  return systemCFG.read(file);
+
+}
+
+aion.prototype.writeSystemCFG = async function(data) {
+
+  let file = path.join(this.aionDir,"\system.cfg");
+  
+  await windows_file_attribute.removeReadOnly(file).catch(()=>{});
+  try {
+    await systemCFG.write(file,data);
+  }catch(err) {
+    debug.log(err);
+  }
+  await windows_file_attribute.setReadOnly(file).catch(()=>{});
 }

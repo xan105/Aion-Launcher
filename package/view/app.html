@@ -267,30 +267,34 @@
       </ul>
       
       <ul class="advance">
-        <li>Advanced</li>
-        <li><div class="left">Dossier du jeu Aion</div><div class="right">
+        <li></li>
+        <li><div class="left"></div><div class="right">
                 <input id="dir_select_game" type="file" nwdirectory nwworkingdir="S:\Game Files\Aion" autocomplete="off"/>
                 <label for="dir_select_game" class="btn small blue">
-                  <span class="uac"></span><span>Change</span>
+                  <span class="uac"></span><span></span>
                 </label>
         </div></li>
-        <li><div class="left">Dossier de telechargement</div><div class="right">
+        <li><div class="left"></div><div class="right">
                 <input id="dir_select_dl" type="file" nwdirectory nwworkingdir="C:\Users\Xan\AppData\Local\AION-LIVE\" autocomplete="off"/>
-                <label for="dir_select_dl" class="btn small blue">Change</label>
+                <label for="dir_select_dl" class="btn small blue"></label>
         </div></li>
-        <li><div class="left">Editeur du fichier de configuration systeme</div><div class="right"><div class="btn small blue">Open</div></div></li>
+        <li><div class="left"></div><div class="right"><div class="btn small blue" id="btn-editor"></div></div></li>
   
       </ul>
       
-      
-      
-      
-      
-      
+
     </div>
-    
+    <div id="settings-systemcfg-editor">
+      <div class="editor">
+        <textarea></textarea>
+        <div class="buttons">
+          <div class="btn red" id="btn-editor-cancel"></div>
+          <div class="btn blue" id="btn-editor-save"></div>
+          <div class="disclaimer"><span></span><br/><span></span></div>
+        </div>
+      </div>
+    </div>
     </section>
-  
   
   </main>
 
@@ -336,9 +340,8 @@
         </div>
         
         <div class="error5">
-          <p><span class="ln">This action requires admin rights.</span><br />
-          <span class="ln"></span></p>
-          <p><span class="ln">Please restart this application with admin rights.</span></p>
+          <p><span class="ln"></span></p>
+          <p><span class="ln"></span></p>
         </div>
     
     </div>

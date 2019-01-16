@@ -737,22 +737,16 @@ iframe[seamless], webview[seamless]{
   transition: all .1s ease-out;
   overflow-y: scroll
 }
-#settings::-webkit-scrollbar {
+#settings::-webkit-scrollbar, #settings-systemcfg-editor textarea::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
-#settings::-webkit-scrollbar-track {
+#settings::-webkit-scrollbar-track, #settings-systemcfg-editor textarea::-webkit-scrollbar-track {
   background: #355896;
 }
-
-/* Handle */
-#settings::-webkit-scrollbar-thumb {
+#settings::-webkit-scrollbar-thumb, #settings-systemcfg-editor textarea::-webkit-scrollbar-thumb {
   background: #0080b9;
 }
-
-/* Handle on hover */
-#settings::-webkit-scrollbar-thumb:hover {
+#settings::-webkit-scrollbar-thumb:hover, #settings-systemcfg-editor textarea::-webkit-scrollbar-thumb:hover {
   background: #0096d6;
 }
 
@@ -933,7 +927,7 @@ iframe[seamless], webview[seamless]{
     margin: auto 20px auto 15px;
 }
 
-#settings .buttons:before {
+#settings .wrapper .buttons:before {
     content: '';
     background: url(../img/weda.png) no-repeat;
     width: 90px;
@@ -957,6 +951,7 @@ iframe[seamless], webview[seamless]{
 #modal[data-error="2"] .content .error2 { display: initial;}
 #modal[data-error="3"] .content .error3 { display: initial;}
 #modal[data-error="4"] .content .error4 { display: initial;}
+#modal[data-error="5"] .content .error5 { display: initial;}
 
 #error-dialog-exit { min-width: 70px; }
 
@@ -968,4 +963,55 @@ footer {
     padding: 5px;
     font-family: "Open sans";
     font-size: 14px;
+}
+
+#settings-systemcfg-editor {
+    position: absolute;
+    width: 100%;
+    height: 651px;
+    z-index: 1;
+    background: rgba(19, 27, 56, 0.8);
+    display: none;
+}
+
+#settings-systemcfg-editor.show { display: flex; }
+
+#settings-systemcfg-editor .editor {
+   margin: 32px auto auto auto;
+   position: relative;
+}
+
+#settings-systemcfg-editor textarea{
+    background: rgb(29, 35, 69);
+    border-color: rgb(80, 82, 91);
+    color: rgb(222, 222, 222);
+    width: 590px;
+    height: 456px;
+    overflow-y: scroll;
+    padding: 10px 20px 10px 10px;
+    resize: none;
+}
+
+#settings-systemcfg-editor .editor:before {
+    content: '';
+    background: url(../img/shugo_book.png) no-repeat;
+    width: 83px;
+    height: 80px;
+    position: absolute;
+    filter: drop-shadow(0px 9px 3px #101010);
+    z-index: 1;
+    top: -15px;
+    left: 0px;
+    transform: translateX(-100%);
+    margin-left: -10px;
+}
+
+#settings-systemcfg-editor .editor .buttons .disclaimer {
+    position: absolute;
+    left: 0px;
+    background: rgba(16, 25, 51, 0.9);
+    padding: 3px 10px;
+    color: #ff3e3e;
+    border: solid 1px #50525b;
+    max-width: 300px;
 }

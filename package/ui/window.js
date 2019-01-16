@@ -33,7 +33,7 @@ win.on('new-win-policy', function(frame, url, policy) {
    $(function() {
    
     $("#win-close").click(function() { 
-        win.close(); 
+        nw.App.closeAllWindows(); 
     });
            
     $("#win-minimize").click(function() { 

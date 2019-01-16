@@ -137,6 +137,19 @@ var l10n = {
             $("#settings .bonus li:nth-child(2) .left").text(self.clean(template.settings.bonus.critfont));
             $("#btn-criticalFont .install").text(self.clean(template.settings.misc.installed["true"]));
             $("#btn-criticalFont .remove").text(self.clean(template.settings.misc.installed["false"]));
+            selector = $("#settings .advance");
+            selector.find("li:first-child").text(self.clean(template.settings.advance.title));
+            selector.find("li:nth-child(2) .left").text(self.clean(template.settings.advance.dir));
+            selector.find("li:nth-child(2) .right label span:not(.uac)").text(self.clean(template.button.change));
+            selector.find("li:nth-child(3) .left").text(self.clean(template.settings.advance.dl_dir));
+            selector.find("li:nth-child(3) .right label").text(self.clean(template.button.change));
+            selector.find("li:nth-child(4) .left").text(self.clean(template.settings.advance.editor));
+            $("#btn-editor").text(self.clean(template.button.open));
+            $("#btn-editor-cancel").text(self.clean(template.button.cancel));
+            $("#btn-editor-save").text(self.clean(template.button.save));   
+            selector = $("#settings-systemcfg-editor .editor .buttons .disclaimer");
+            selector.find("span:eq(0)").text(self.clean(template.settings.advance.disclaimer.ln1));
+            selector.find("span:eq(1)").text(self.clean(template.settings.advance.disclaimer.ln2));
             $("#modal .header span").text(self.clean(template.error.title));
             selector = $("#modal .content .error0");
             selector.find(".ln:eq(0)").text(self.clean(template.error["0"].ln1));
@@ -158,6 +171,9 @@ var l10n = {
             selector.find(".ln:eq(0)").text(self.clean(template.error["4"].ln1));
             selector.find(".ln:eq(1)").text(self.clean(template.error["4"].ln2));
             selector.find(".ln:eq(2)").text(self.clean(template.error["4"].ln3));
+            selector = $("#modal .content .error5");
+            selector.find(".ln:eq(0)").text(self.clean(template.error["5"].ln1));
+            selector.find(".ln:eq(1)").text(self.clean(template.error["5"].ln2));
             $("#error-dialog-exit").text(self.clean(template.button.acknowledge));
             
       });

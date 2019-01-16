@@ -5,7 +5,9 @@
     "update": "Mise à jour",
     "cancel" : "Annuler",
     "save" : "Confirmer",
-    "acknowledge" : "Compris !"
+    "acknowledge" : "Compris !",
+    "change": "Changer",
+    "open": "Ouvrir"
   },
   "menu" : {
     "website": "Site Web",
@@ -81,6 +83,16 @@
       "title" : "Bonus",
       "critfont" : "Police japonaise pour les coups critiques"
     },
+    "advance" : {
+      "title": "Avancé",
+      "dir": "Dossier du jeu Aion",
+      "dl_dir": "Dossier de téléchargement",
+      "editor": "Éditeur de fichier de configuration système",
+      "disclaimer" : {
+        "ln1": "Utilisez ceci à vos risques et périls!",
+        "ln2": "En modifiant certaines valeurs, votre compte peut être suspendu."
+      }
+    },
     "misc": {
       "enabled" : {
         "true" : "Activer",
@@ -122,6 +134,10 @@
       "ln1" : "Erreur inattendue sur l'opération de fichier !",
       "ln2" : "Vérifiez les droits d’écriture, les fichiers en lecture seule et corrompus.",
       "ln3" : "Veuillez réessayer. Si le problème persiste, contactez l'auteur de ce programme."
+    },
+    "5" : {
+      "ln1" : "Cette action nécessite des droits d'administrateur.",
+      "ln2" : "Veuillez redémarrer cette application avec les droits d'administrateur."
     }
   }
 }

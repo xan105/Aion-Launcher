@@ -52,6 +52,14 @@ var app = {
             }catch(e){
               $("#dir_select_dl").attr("nwworkingdir","");
             }
+            
+            let editor = $("#settings .advance li:nth-child(4)");
+            aion.hasSystemCFG().then((result)=>{ 
+              if (!result) { editor.hide(); }
+            })
+            .catch(()=>{
+              editor.hide();
+            })
 
             $("#gameforge-news").attr("src",`https:\/\/${locale}.aion.gameforge.com/website/game/slider`);
             
@@ -304,11 +312,40 @@ var app = {
                   }
               });
               
+              $("#btn-editor").click(async function(){
+                 $(this).css("pointer-events","none");
+                 let editor = $("#settings-systemcfg-editor");
+                 try {
+                    editor.find("textarea").val(await aion.readSystemCFG());
+                    editor.addClass("show");
+                 }catch(err) {
+                    self.error(0,true);
+                 }
+                 $(this).css("pointer-events","initial");
+              });
               
-              
-              
-              
-  
+              $("#btn-editor-cancel").click(function(){
+                $(this).css("pointer-events","none");
+                  let editor = $("#settings-systemcfg-editor");
+                  editor.removeClass("show");
+                  editor.find("textarea").val('');
+                $(this).css("pointer-events","initial");
+              });
+
+              $("#btn-editor-save").click(async function(){
+                $(this).css("pointer-events","none");
+                  let editor = $("#settings-systemcfg-editor");
+                  try {
+                    let data = editor.find("textarea").val();
+                    await aion.writeSystemCFG(data);
+                    throw "test";
+                  }catch(err) {
+                    self.error(4,true);
+                  }
+                  editor.removeClass("show");
+                  editor.find("textarea").val('');
+                $(this).css("pointer-events","initial");
+              });
   },
   progress : {
     load : $(".loadingBar"),

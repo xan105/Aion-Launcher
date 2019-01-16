@@ -5,7 +5,9 @@
     "update": "Aktualisieren",
     "cancel" : "Abbrechen",
     "save" : "Bestätigen",
-    "acknowledge" : "Verstanden !"
+    "acknowledge" : "Verstanden !",
+    "change": "Zu ändern",
+    "open": "Zu öffnen"
   },
   "menu" : {
     "website": "Webseite",
@@ -81,6 +83,16 @@
       "title" : "Bonus",
       "critfont" : "Japanische kritische Schrift"
     },
+    "advance" : {
+      "title": "Erweitert",
+      "dir": "Aion Spielordner",
+      "dl_dir": "Download Ordner",
+      "editor": "Systemkonfigurationsdatei-Editor",
+      "disclaimer" : {
+        "ln1": "Verwenden Sie dies auf eigene Gefahr!",
+        "ln2": "Ändern bestimmter Werte wird Ihr Konto möglicherweise gesperrt."
+      }
+    },
     "misc": {
       "enabled" : {
         "true" : "Aktivieren",
@@ -122,6 +134,10 @@
       "ln1" : "Unerwarteter Fehler beim Dateibetrieb!",
       "ln2" : "Überprüfen Sie die Schreibberechtigung, schreibgeschützte und beschädigte Dateien.",
       "ln3" : "Bitte versuche es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an den Autor dieses Programms."
+    },
+    "5" : {
+      "ln1" : "Diese Aktion erfordert Administratorrechte.",
+      "ln2" : "Bitte starten Sie diese Anwendung mit Administratorrechten neu."
     }
   }
 }

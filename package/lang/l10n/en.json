@@ -5,7 +5,9 @@
     "update": "Update",
     "cancel" : "Cancel",
     "save" : "Save",
-    "acknowledge" : "Got it !"
+    "acknowledge" : "Got it !",
+    "change": "Change",
+    "open": "Open"
   },
   "menu" : {
     "website": "Website",
@@ -81,6 +83,16 @@
       "title" : "Bonus",
       "critfont" : "Japanese Critical font"
     },
+    "advance" : {
+      "title": "Advanced",
+      "dir": "Aion game folder",
+      "dl_dir": "Download folder",
+      "editor": "System Configuration File Editor",
+      "disclaimer" : {
+        "ln1": "Use this at your own risk !",
+        "ln2": "Modifying some values can get you banned."
+      }
+    },
     "misc": {
       "enabled" : {
         "true" : "Enable",
@@ -122,6 +134,10 @@
       "ln1" : "Unexpected error on file operation !",
       "ln2" : "Check for writing permission, read-only files and corrupted.",
       "ln3" : "Please try again. If the problem continues, contact the author of this program."
+    },
+    "5" : {
+      "ln1" : "This action requires admin rights.",
+      "ln2" : "Please restart this application with admin rights."
     }
   }
 }
