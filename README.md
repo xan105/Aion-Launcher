@@ -18,7 +18,7 @@ Features
   - **Install/Update Japanese sounds directly from the official Japan server and auto correct the voice order to match Aion EU/NA!**
   - Install/remove Japanese critical font fixed (Parry/Block) for EU/NA version of the game from [my Japanese voice pack](https://github.com/xan105/Aion-Japanese-Voice-Pack)
   - Show useful information about the game maintenance! (Login server status, the in-game maintenance announcement from the game login screen, the number of in-game steam players)
-  - **Optional** direct login (leave fields blank if you don't want to use it) *2
+  - **Optional** direct login (*leave fields blank if you don't want to use it*) *2
   - Handle all the languages of the European version *3
   - UI is translated in English, French, and German. (Feel free to help me translate to the others languages)
   - Pull current game args from Gameforge server just like original launcher.
@@ -68,7 +68,7 @@ Screenshot
 <img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_preparing.png"/>
 <img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/settings.png"/>
 <img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/main_no_maintenance.png">
-
+<img src="https://github.com/xan105/Aion-Launcher/raw/master/screenshot/editor.png">
 
 Legal
 -----
