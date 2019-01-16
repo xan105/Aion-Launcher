@@ -7,7 +7,7 @@
 
 [Setup]
 #define AppName "Aion-LIVE Launcher"
-#define OurVersion "1.0.0"
+#define OurVersion "1.0.1"
 #define Author "Xan"
 #define Website "https://github.com/xan105/Aion-Launcher"
 #define DonationURL "https://www.paypal.me/xan105"
@@ -446,7 +446,7 @@ begin
     ExtractTemporaryFile(ExtractFileName(ExecFileName));
 
     TmpFileName := ExpandConstant('{tmp}') + '\ping_result.txt';
-    Exec(ExpandConstant('{cmd}'), '/C '+expandconstant('{tmp}\curl.exe')+' -s -o NUL "'+url+'" --max-time '+timeout+' && echo true > "' + TmpFileName + '" || echo false > "' + TmpFileName + '"', '', SW_HIDE,ewWaitUntilTerminated, ResultCode);
+    Exec(ExpandConstant('{cmd}'), '/C '+expandconstant('{tmp}\curl.exe')+' -L -k -s -o NUL "'+url+'" --max-time '+timeout+' && echo true > "' + TmpFileName + '" || echo false > "' + TmpFileName + '"', '', SW_HIDE,ewWaitUntilTerminated, ResultCode);
     LoadStringFromFile(TmpFileName, ExecStdout);
     if Pos('true', ExecStdout) > 0 then begin
       reachable := True;
