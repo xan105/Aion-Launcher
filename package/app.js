@@ -16,7 +16,9 @@ var app = {
                   this.error(1);
                 }
                 
-                if (elevated) { $("#dir_select_game ~label span.uac").hide(); }
+                if (elevated) { 
+                  $("#dir_select_game ~label span.uac").hide().removeClass("uac");
+                }
              })
              .catch(()=>{})
              
