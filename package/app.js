@@ -46,8 +46,7 @@ var app = {
             
             $("#menu ul:not(.social) li:nth-child(1) a").attr("href",`https://${locale}.aion.gamege.com/website/`);
             $("#menu ul:not(.social) li:nth-child(2) a").attr("href",`https://${locale}.aion.gameforge.com/shop/`);
-            $("#menu ul:not(.social) li:nth-child(3) a").attr("href",`https://board.${locale}.aion.gameforge.com/`);
-            
+
             $("#dir_select_game").attr("nwworkingdir",aion.aionDir);
             try {
               $("#dir_select_dl").attr("nwworkingdir",aion.options.path.download);
