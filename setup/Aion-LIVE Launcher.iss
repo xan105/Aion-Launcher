@@ -7,12 +7,12 @@
 
 [Setup]
 #define AppName "Aion-LIVE Launcher"
-#define OurVersion "1.0.1"
+#define OurVersion "1.0.2"
 #define Author "Xan"
 #define Website "https://github.com/xan105/Aion-Launcher"
 #define DonationURL "https://www.paypal.me/xan105"
 #define VersionURL "https://github.com/xan105/Aion-Launcher/raw/master/setup/version.ini"
-#define Copyright "© 2018"
+#define Copyright "© 2019"
 
 ; xp, vista, win7, win8, win8.1, win10
 #define MinWin "win7"
