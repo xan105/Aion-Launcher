@@ -42,7 +42,7 @@ var app = {
             let locale = l10n.lang || aion.options.Aion.language.slice(0,2) || "en";
             $("html").attr("lang",`${locale.toLowerCase()}`);
             
-            $("#menu ul:not(.social) li:nth-child(1) a").attr("href",`https://${locale}.aion.gamege.com/website/`);
+            $("#menu ul:not(.social) li:nth-child(1) a").attr("href",`https://${locale}.aion.gameforge.com/website/`);
             $("#menu ul:not(.social) li:nth-child(2) a").attr("href",`https://${locale}.aion.gameforge.com/shop/`);
 
             $("#dir_select_game").attr("nwworkingdir",aion.aionDir);
