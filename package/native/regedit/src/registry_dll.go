@@ -1,3 +1,4 @@
+//go:generate goversioninfo -platform-specific=true
 package main
 
 import (
@@ -28,22 +29,22 @@ func GetHKEY(root string) registry.Key {
 }
 
 //export RegKeyExists
-func RegKeyExists(root *C.char, key *C.char) *C.char {
+func RegKeyExists(root *C.char, key *C.char) C.uint {
 
-	var result string
+	var result int
 	HKEY := GetHKEY(C.GoString(root))
 
 	k, err := registry.OpenKey(HKEY , C.GoString(key), registry.QUERY_VALUE)
   
   if err != nil {
-		result = "false"
+		result = 0
   } else {
-    result = "true"
+    result = 1
   }
 
   defer k.Close()
 		 
-  return C.CString(result)
+  return C.uint(result)
 
 }
 

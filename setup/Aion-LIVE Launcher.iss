@@ -7,12 +7,12 @@
 
 [Setup]
 #define AppName "Aion-LIVE Launcher"
-#define OurVersion "1.0.2"
+#define OurVersion "1.0.3"
 #define Author "Xan"
 #define Website "https://github.com/xan105/Aion-Launcher"
 #define DonationURL "https://www.paypal.me/xan105"
 #define VersionURL "https://github.com/xan105/Aion-Launcher/raw/master/setup/version.ini"
-#define Copyright "© 2019"
+#define Copyright "© 2018-2019"
 
 ; xp, vista, win7, win8, win8.1, win10
 #define MinWin "win7"
@@ -92,8 +92,8 @@ Name: "{group}\{cm:RunMe,{#AppName}}"; Filename: "{#AppMain}"; WorkingDir: "{#Ap
 Name: "{group}\{cm:UninstallProgram,{#AppName}}"; Filename: "{uninstallexe}"; WorkingDir: "{app}\__unins__"; Check: GetOption('CreateStartMenu') and GetOption('CreateUninstaller');
 
 [Run]
-Filename: "{#AppMain}"; WorkingDir: "{#AppWorkingDir}"; Description: "{cm:RunMe,{#AppName}}"; Flags: runascurrentuser postinstall nowait skipifsilent skipifdoesntexist unchecked
-Filename: "{#AppMain}"; WorkingDir: "{#AppWorkingDir}"; Parameters: "-noselfupdate"; Description: "{cm:RunMe,{#AppName}}"; Flags: runascurrentuser nowait skipifnotsilent skipifdoesntexist
+Filename: "{#AppMain}"; WorkingDir: "{#AppWorkingDir}"; Description: "{cm:RunMe,{#AppName}}"; Flags: runasoriginaluser postinstall nowait skipifsilent skipifdoesntexist unchecked
+Filename: "{#AppMain}"; WorkingDir: "{#AppWorkingDir}"; Parameters: "-noselfupdate"; Description: "{cm:RunMe,{#AppName}}"; Flags: runasoriginaluser nowait skipifnotsilent skipifdoesntexist
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{localappdata}\AION-LIVE"

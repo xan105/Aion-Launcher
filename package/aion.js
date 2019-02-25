@@ -184,7 +184,7 @@ function getAionDirSync() {
         let steamDir = regedit.RegQueryStringValue("HKLM","Software\\Valve\\Steam","InstallPath"); 
         let data = fs.readFileSync(path.join(steamDir, "steamapps/libraryfolders.vdf"), "utf8");
            
-        if (regedit.RegKeyExists("HKLM","Software\\Valve\\Steam\\apps",steam_db_id.toString()) === "true") {
+        if (regedit.RegKeyExists("HKLM","Software\\Valve\\Steam\\apps") === 1) {
             
               let list = steamVDF.parse(data.toString());
 
