@@ -76,17 +76,7 @@ Software provided here is to be use at your own risk. This is provided as is wit
 In no event or circumstances will the authors or company be held liable for any damage to yourself or your computer that may arise from the installation or use of the free software aswell as his documentation that is provided on this website.<br/>
 And for anything that may occur as a result of your use, or inability to use the materials provided via this website.<br/> We accept no responsibilities in case your Aion provider decide to suspend temporarely or defenitely your Aion account.<br/>
 <br/>
-Unless otherwise specified you are free to:<br/>
 
-- Share — copy and redistribute the material in any medium or format<br/>
-- Adapt — remix, transform, and build upon the material<br/>
-
-Under the following terms:<br/>
-
-- Attribution — You must give appropriate credit, provide a link, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.<br/>
-- NonCommercial — You may not use the material for commercial purposes.<br/>
-
-© 2018 Anthony Beaumont. All rights reserved. <br/>
 Other trademarks, copyright are the property of their respective owners. No copyright or trademark infringement is intended by using third-party resources. Except where otherwise specified, the contents of this project is subject to copyright.<br/>
 
 Aion™ is a registered trademark of NCSOFT Corporation.<br/>
