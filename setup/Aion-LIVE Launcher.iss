@@ -199,6 +199,8 @@ function GetOption (option: string) : boolean;
 begin
     if option = 'CreateStartMenu' then begin
         Result:= CreateStartMenu.checked;
+    end else if (option = 'CreateDesktopIcon') and (WizardSilent) then begin
+        Result:= False;
     end else if option = 'CreateDesktopIcon' then begin
         Result:= CreateDesktopIcon.checked;
     end else if option = 'CreateUninstaller' then begin
