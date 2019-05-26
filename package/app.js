@@ -210,7 +210,7 @@ var app = {
 
               $("#btn-launch").click(async function(){
                 $(this).css("pointer-events","none");
-                
+
                 if (self.hasUpdate) {
                    $(".loadingBar").show();
                    $("#btns").hide();
@@ -228,6 +228,7 @@ var app = {
                      $(".loadingBar").hide();
                      $("#btns").show();
                      $("#win-settings").css("pointer-events","initial");
+                     $(this).css("pointer-events","initial");
                      return;
                    }
                    $(".loadingBar").hide();
@@ -337,7 +338,6 @@ var app = {
                   try {
                     let data = editor.find("textarea").val();
                     await aion.writeSystemCFG(data);
-                    throw "test";
                   }catch(err) {
                     self.error(4,true);
                   }

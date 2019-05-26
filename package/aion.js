@@ -614,7 +614,7 @@ aion.prototype.generateDownloadFileList = async function(repairMode, callbackPro
           });
        })
       .then((data) => { resolve(data) })
-      .catch((err) => { debug.log(e); reject(err) })  
+      .catch((err) => { debug.log(err); reject(err) })  
     });
     
     var torrent = await new Promise((resolve,reject) => {
