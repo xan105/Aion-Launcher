@@ -1,7 +1,7 @@
 {
   "name": "AION-LIVE",
   "description": "Alternative Launcher for the game Aion",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "package/init.js",
   "view" : {
     "app" : "package/view/app.html",
