@@ -520,8 +520,6 @@ aion.prototype.run = async function(credentials = {user: null, password: null}) 
     args.push(`-account:${credentials.user}`);
     args.push(`-password:${credentials.password}`);
   }
-
-  debug.log(args);
   
   if (this.options.Aion.forcewin7) {
     regedit.RegWriteStringValue("HKCU","Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",path.join(this.aionDir,bin.x64),"~ WIN7RTM");
@@ -1039,7 +1037,8 @@ try {
 
                          if (await ffs.promises.exists(destination)) {
                             debug.log("voicepack patch found");
-                            if (updatedList.find( el => file.includes(el.path))){
+
+                            if (updatedList.find( el => file.toString().toLowerCase().includes(el.path.toString().replace(/\\/g, '/').toLowerCase()) )){
                                 debug.log("voicepack patch must be updated because source was updated");
                                 await voicepackCreatePatch(file, destination);
                             }
