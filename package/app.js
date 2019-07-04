@@ -129,6 +129,9 @@ var app = {
               $("#win-settings").click(function(){
                 $(this).css("pointer-events","none");
                 
+                let uiLang = $("#settings .option li:nth-child(2) select");
+                uiLang.val( uiLang.find("option[selected]").val() );
+
                 for (let option in aion.options.Aion) {
                     if ( $(`#option_${option} option[value="${aion.options.Aion[option]}"]`).length > 0 )
                     {
@@ -167,8 +170,6 @@ var app = {
                 $(this).removeClass("wait");
                 $(this).css("pointer-events","initial");
               });
-
-
 
               $("#btn-settings-cancel").click(function(){
                 $(this).css("pointer-events","none");
